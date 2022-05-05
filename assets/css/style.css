@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Sora, Helvetica, Arial, sans-serif;
+    background-image: url("/assets/images/main-background-image.jpg");
+}
+
+header {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+header nav ul a {
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 15px;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 150px;
+    max-height: 250px;
+    margin: auto 0;
+    padding: 10px;
+}
+
+.hero-about {
+    display: flex;
+    flex-wrap: wrap;
+}
