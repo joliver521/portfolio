@@ -6,45 +6,67 @@
 
 body {
     font-family: Sora, Helvetica, Arial, sans-serif;
-    background-image: url("/assets/images/main-background-image.jpg");
+    /* background-image: url("../images/main-background-image.jpg"); */
 }
 
 header {
     padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
 }
 
 header h1 {
-    justify-content: center;
-    flex-wrap: wrap;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-header nav ul {
+.navbar {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.navbar-links li {
     list-style: none;
 }
 
-header nav ul a {
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 10px 15px;
+.navbar-links li a {
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: space-around;
+    padding: 5px;
 }
 
 .hero-image {
     display: flex;
-    justify-content: center;
 }
 
 .hero-image img {
     max-width: 150px;
     max-height: 250px;
-    margin: auto 0;
     padding: 10px;
 }
 
 .hero-about {
     display: flex;
     flex-wrap: wrap;
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-links ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
 }
