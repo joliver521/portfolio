@@ -17,6 +17,7 @@ body {
     background-color: var(--secondary-color);
 }
 
+/* header/nav section begin */
 header {
     padding: 10px;
     background-color: var(--primary-color);
@@ -63,6 +64,9 @@ header h1 {
     border: none;
 }
 
+/* header/nav section end */
+
+/* footer section start */
 footer {
     background-color: var(--primary-color);
     color: var(--font-color);
@@ -71,6 +75,9 @@ footer {
     justify-content: center;
 }
 
+/* footer section end */
+
+/* hero section start */
 .hero {
     color: var(--secondary-color);
 }
@@ -86,9 +93,11 @@ footer {
     border-radius: 10px;
     border: 2px solid black;
     margin: 0 auto;
-
 }
 
+/* hero section end */
+
+/* main section styling start */
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -115,6 +124,9 @@ footer {
     background-color: var(--primary-color);
 }
 
+/* main section styling end */
+
+/* about me section start */
 .about-me {
     display: flex;
     flex-direction: column;
@@ -124,6 +136,9 @@ footer {
     text-align: center;
 }
 
+/* about me section end */
+
+/* projects section start */
 .projects {
     display: flex;
     flex-direction: column;
@@ -146,7 +161,10 @@ footer {
     align-items: center;
 }
 
-.contact {
+/* projects section end */
+
+/* contact section start */
+contact {
     display: flex;
     flex-direction: column;
 }
@@ -169,6 +187,9 @@ footer {
     border: none;
 }
 
+/*  contact section end */
+
+/* responisive webpage for screen sizes larger than 600 px */
 @media screen and (min-width: 600px) {
     header {
         display: flex;
