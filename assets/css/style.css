@@ -210,6 +210,10 @@ footer {
         padding: 10px;
     }
 
+    .projects h3 {
+        text-align: center;
+    }
+
     .projects img {
         aspect-ratio: 1 / 1;
         object-fit: cover;
