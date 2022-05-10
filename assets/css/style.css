@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #1d3557;
-    --secondary-color: #457b9d;
-    --font-color: #f1faee;
-    --button-color: #e63946;
+    --primary-color: #fff;
+    --secondary-color: #6a6a6a;
+    --font-color: #393939;
+    --button-color: #b32db4;
 }
 
 * {
@@ -14,7 +14,7 @@
 body {
     font-family: system-ui;
     color: var(--font-color);
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 /* header/nav section begin */
@@ -53,7 +53,6 @@ header h1 {
 
 .navbar ul a {
     text-decoration: none;
-    border: 1px solid var(--font-color);
     border-radius: 10px;
     justify-content: space-around;
     padding: 5px;
@@ -62,7 +61,7 @@ header h1 {
 
 .navbar li a:hover {
     background-color: var(--button-color);
-    color: var(--font-color);
+    color: var(--primary-color);
     border: none;
 }
 
@@ -84,20 +83,36 @@ footer {
     color: var(--secondary-color);
 }
 
-.hero-image {
+.hero img {
+    width: 100%;
+}
+
+/* hero section end */
+
+/* about me section start */
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me p {
+    text-align: center;
+}
+
+.profile-image {
     padding: 20px 10px;
     display: flex;
     justify-content: center;
 }
 
-.hero-image img {
-    width: 20%;
+.profile-image img {
+    width: 30%;
+    object-fit: contain;
     border-radius: 10px;
-    border: 2px solid black;
-    margin: 0 auto;
 }
 
-/* hero section end */
+/* about me section end */
 
 /* main section styling start */
 .content {
@@ -127,18 +142,6 @@ footer {
 }
 
 /* main section styling end */
-
-/* about me section start */
-.about-me {
-    display: flex;
-    flex-direction: column;
-}
-
-.about-me p {
-    text-align: center;
-}
-
-/* about me section end */
 
 /* projects section start */
 .projects {
@@ -198,11 +201,18 @@ footer {
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .navbar ul {
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .about-me {
+        display: flex;
         flex-direction: row;
     }
 
