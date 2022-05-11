@@ -5,6 +5,16 @@
     --button-color: #b32db4;
 }
 
+@font-face {
+    font-family: Gotham-Light;
+    src: url("../fonts/GOTHAM-LIGHT.TTF");
+}
+
+@font-face {
+    font-family: Gotham-Bold;
+    src: url("../fonts/GOTHAM-BOLD.TTF");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,13 +30,13 @@ body {
 /* header/nav section begin */
 header {
     padding-top: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     background-color: var(--primary-color);
+    gap: 1em;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    gap: 1rem;
     flex-direction: column;
     margin: 0 auto;
 }
@@ -34,7 +44,7 @@ header {
 header h1 {
     font-size: 2em;
     text-transform: uppercase;
-    font-family: Inter, system-ui;
+    font-family: Gotham-Light, system-ui;
 }
 
 .navbar {
@@ -49,13 +59,15 @@ header h1 {
     align-items: center;
     list-style: none;
     gap: 1.3rem;
+    font-family: Gotham-Light, system-ui;
+    text-transform: uppercase;
 }
 
 .navbar ul a {
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 5px;
     justify-content: space-around;
-    padding: 5px;
+    padding: 10px;
     color: var(--font-color);
 }
 
@@ -85,6 +97,8 @@ footer {
 
 .hero img {
     width: 100%;
+    object-fit: cover;
+    padding-bottom: 2em;
 }
 
 /* hero section end */
@@ -93,22 +107,37 @@ footer {
 
 .about-me {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
-.about-me p {
+.about-info {
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+.about-info h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-family: Gotham-Bold, system-ui;
+}
+
+.about-info p {
+    font-family: Gotham-Light;
+    line-height: 1.5em;
 }
 
 .profile-image {
-    padding: 20px 10px;
+    padding: 10px;
     display: flex;
     justify-content: center;
 }
 
 .profile-image img {
     width: 30%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -127,13 +156,13 @@ footer {
     text-align: center;
     text-transform: uppercase;
     color: var(--font-color);
-    font-family: Inter, system-ui;
+    font-family: Gotham-Bold, system-ui;
     font-size: 3em;
 }
 
 .content p {
     color: var(--font-color);
-    font-family: Inter, system-ui;
+    font-family: Gotham-Light, system-ui;
     padding: 10px;
 }
 
@@ -145,18 +174,16 @@ footer {
 
 /* projects section start */
 .projects {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: grid;
 }
 
 .projects h3 {
     color: var(--font-color);
+    padding-bottom: 10px;
 }
 
 .projects img {
     width: 100%;
-    border: 2px solid black;
     border-radius: 10px;
 }
 
@@ -174,6 +201,10 @@ footer {
     flex-direction: column;
 }
 
+.contact h2 {
+    font-size: 2em;
+}
+
 .contact-links a {
     display: flex;
     justify-content: center;
@@ -183,12 +214,11 @@ footer {
     margin-bottom: 5px;
     margin-top: 5px;
     border-radius: 10px;
-    background-color: var(--button-color);
 }
 
 .contact-links a:hover {
-    background-color: var(--font-color);
-    color: var(--button-color);
+    background-color: var(--button-color);
+    color: var(--primary-color);
     border: none;
 }
 
@@ -211,9 +241,34 @@ footer {
         flex-direction: row;
     }
 
+    .hero img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 25%;
+    }
+
+    .profile-image {
+        padding: 20px 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-image img {
+        width: 50%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
     .about-me {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-info {
+        text-align: center;
+        padding-left: 20px;
     }
 
     .contact {
@@ -230,25 +285,26 @@ footer {
         gap: 1rem;
     }
 
-
     .project {
         width: 100%;
         margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: grid;
+        gap: 1.2em;
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .projects {
-        width: 50%;
+        width: 100%;
         padding: 10px;
     }
 
     .projects h3 {
         text-align: center;
+        padding-bottom: 20px;
     }
 
     .projects img {
+        width: 100%;
         aspect-ratio: 1 / 1;
         object-fit: cover;
         transition: 0.5s all ease-in-out;
