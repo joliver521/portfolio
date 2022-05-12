@@ -103,8 +103,7 @@ header h1 {
 
 .about-info {
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -124,6 +123,8 @@ header h1 {
     padding: 10px;
     display: flex;
     justify-content: center;
+
+    /* margin: auto; */
 }
 
 .profile-image img {
@@ -288,11 +289,15 @@ footer {
     }
 
     .project {
-        width: 100%;
+        width: 75%;
         margin: 0 auto;
         display: grid;
         gap: 1.2em;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-col-span-3 {
+        grid-column: span 3;
     }
 
     .projects {
@@ -309,10 +314,5 @@ footer {
         width: 100%;
         aspect-ratio: 1 / 1;
         object-fit: cover;
-        transition: 0.5s all ease-in-out;
-    }
-
-    .projects img:hover {
-        transform: scale(1.2);
     }
 }
