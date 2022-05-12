@@ -5,6 +5,7 @@
     --button-color: #b32db4;
 }
 
+/* custom font family Gotham */
 @font-face {
     font-family: Gotham-Light;
     src: url("../fonts/GOTHAM-LIGHT.TTF");
@@ -79,16 +80,6 @@ header h1 {
 
 /* header/nav section end */
 
-/* footer section start */
-footer {
-    background-color: var(--primary-color);
-    color: var(--font-color);
-    padding: 20px 10px;
-    display: flex;
-    justify-content: center;
-}
-
-/* footer section end */
 
 /* hero section start */
 .hero {
@@ -223,6 +214,17 @@ footer {
 }
 
 /*  contact section end */
+
+/* footer section start */
+footer {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* footer section end */
 
 /* responisive webpage for screen sizes larger than 600 px */
 @media screen and (min-width: 600px) {
